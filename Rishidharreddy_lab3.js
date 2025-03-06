@@ -18,9 +18,9 @@ function minMaxAverage(arr) {
 // Test case 1
 minMaxAverage([2, 5, 23, 6, 9, 4, 30, 1]);
 // Test case 2
-minMaxAverage([1, 5, 3, 5, 10, 12, 8, 6]);
+minMaxAverage([1, 5, 3, 11, 10, 16, 8, 6, 33]);
 // Test case 3
-minMaxAverage([7, 12, 19, 3, 15]);
+minMaxAverage([7, 12, 21, 3, 15]);
 
 
 // Exercise #2: countVowels function
@@ -37,11 +37,11 @@ function countVowels(word) {
 }
 
 // Test case 1
-countVowels("Winter");
+countVowels("beautiful");
 // Test case 2
-countVowels("Programming");
+countVowels("coding");
 // Test case 3
-countVowels("Apple");
+countVowels("pineapple");
 
 
 // Exercise #3: sortNumbers function
@@ -54,11 +54,11 @@ function sortNumbers(arr) {
 }
 
 // Test case 1
-sortNumbers([9, 4, 6, 2]);
+sortNumbers([8, 4, 6, 1]);
 // Test case 2
 sortNumbers([12, 3, 8, 7, 10]);
 // Test case 3
-sortNumbers([21, 18, 9, 6]);
+sortNumbers([25, 18, 5, 6]);
 
 
 // Exercise #4: celsiusToFahrenheit function (handles string inputs)
@@ -71,13 +71,13 @@ function celsiusToFahrenheit(celsius) {
 }
 
 // Test case 1
-celsiusToFahrenheit(30);
+celsiusToFahrenheit(34);
 // Test case 2
-celsiusToFahrenheit("25");
+celsiusToFahrenheit("30");
 // Test case 3
 celsiusToFahrenheit(0);
 // Test case 4 (string input)
-celsiusToFahrenheit("35");
+celsiusToFahrenheit("42");
 
 
 // Exercise #5: sortPeopleByAge function
@@ -92,21 +92,21 @@ function sortPeopleByAge(people) {
 
 // Test case 1
 var people1 = [
-    {name: 'John', age: 23, city: 'Chicago'},
-    {name: 'Jane', age: 29, city: 'New York'},
-    {name: 'Steve', age: 21, city: 'Los Angeles'},
-    {name: 'Alice', age: 35, city: 'San Francisco'},
-    {name: 'Bob', age: 19, city: 'Miami'}
+    {name: 'rishi', age: 24, city: 'new york'},
+    {name: 'shyam', age: 27, city: 'delhi'},
+    {name: 'sujay', age: 21, city: 'hyderabad'},
+    {name: 'varun', age: 35, city: 'wisconsin'},
+    {name: 'preetham', age: 20, city: 'new jersey'}
 ];
 sortPeopleByAge(people1);
 
 // Test case 2
 var people2 = [
-    {name: 'Liam', age: 25, city: 'Boston'},
-    {name: 'Emma', age: 28, city: 'Seattle'},
-    {name: 'Olivia', age: 30, city: 'Austin'},
-    {name: 'James', age: 22, city: 'Dallas'},
-    {name: 'Isabella', age: 27, city: 'Portland'}
+    {name: 'ram', age: 25, city: 'banglore'},
+    {name: 'naveen', age: 28, city: 'chennai'},
+    {name: 'debruyne', age: 30, city: 'ethihad'},
+    {name: 'haaland', age: 21, city: 'norway'},
+    {name: 'nishda', age: 27, city: 'tokyo'}
 ];
 sortPeopleByAge(people2);
 
