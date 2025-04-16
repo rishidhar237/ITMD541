@@ -7,46 +7,46 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Good Tip Calculator</h1>
-    <form id="tipForm">
-      <label for="billTotal">Bill Total ($):</label>
-      <input type="text" id="billTotal" placeholder="Enter bill total" />
+  <div class="overlay">
+    <div class="container">
+      <img src="https://cdn-icons-png.flaticon.com/512/1011/1011863.png" alt="Calculator Icon" class="logo" />
+      <h1>💡 Good Tip Calculator</h1>
+      <form id="tipForm">
+        <label for="billTotal">🧾 Bill Total ($):</label>
+        <input type="text" id="billTotal" placeholder="Enter bill total" />
 
-      <label for="totalWithTax">Total with 11% Tax ($):</label>
-      <input type="text" id="totalWithTax" disabled />
+        <label for="totalWithTax">🧮 Total with 11% Tax ($):</label>
+        <input type="text" id="totalWithTax" disabled />
 
-      <label for="tipSlider">Tip Percentage (%):</label>
-      <input type="range" id="tipSlider" min="0" max="100" />
+        <label for="tipSlider">💰 Tip Percentage (%):</label>
+        <input type="range" id="tipSlider" min="0" max="100" value="15" />
+        <div class="range-label" id="tipPercent">15%</div>
 
-      <label for="tipPercent">Selected Tip %:</label>
-      <input type="text" id="tipPercent" disabled />
+        <label for="tipAmount">💵 Tip Amount ($):</label>
+        <input type="text" id="tipAmount" disabled />
 
-      <label for="tipAmount">Tip Amount ($):</label>
-      <input type="text" id="tipAmount" disabled />
+        <label for="totalWithTipTax">🧾 Total with Tip + Tax ($):</label>
+        <input type="text" id="totalWithTipTax" disabled />
 
-      <label for="totalWithTipTax">Total with Tip + Tax ($):</label>
-      <input type="text" id="totalWithTipTax" disabled />
+        <label for="currency">🌐 Convert to:</label>
+        <select id="currency">
+          <option value="usd">USD (Default)</option>
+          <option value="inr">INR (₹)</option>
+          <option value="eur">EUR (€)</option>
+        </select>
 
-      <label for="currency">Convert to:</label>
-      <select id="currency">
-        <option value="usd">USD (Default)</option>
-        <option value="inr">INR (₹)</option>
-        <option value="eur">EUR (€)</option>
-      </select>
+        <div id="conversionRateDisplay"></div>
 
-      <div id="conversionRateDisplay"></div>
+        <label for="convertedTip">🔄 Converted Tip Amount:</label>
+        <input type="text" id="convertedTip" disabled />
 
-      <label for="convertedTip">Converted Tip Amount:</label>
-      <input type="text" id="convertedTip" disabled />
+        <label for="convertedTotal">🔄 Converted Total with Tip + Tax:</label>
+        <input type="text" id="convertedTotal" disabled />
 
-      <label for="convertedTotal">Converted Total with Tip + Tax:</label>
-      <input type="text" id="convertedTotal" disabled />
-
-      <div id="errorMsg"></div>
-    </form>
+        <div id="errorMsg"></div>
+      </form>
+    </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
