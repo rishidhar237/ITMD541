@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    padding: 30px;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 500px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  
+  form input[type="text"],
+  form input[type="range"],
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input:disabled {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    color: #666;
+  }
+  
+  #conversionRateDisplay {
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  #errorMsg {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    form input,
+    form select {
+      font-size: 14px;
+    }
+  }
+  
