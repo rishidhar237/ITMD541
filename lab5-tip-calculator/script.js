@@ -10,7 +10,6 @@ const conversionRateDisplay = document.getElementById("conversionRateDisplay");
 const convertedTip = document.getElementById("convertedTip");
 const convertedTotal = document.getElementById("convertedTotal");
 
-//currency rates
 const rates = {
   inr: 85,
   eur: 0.95
@@ -22,40 +21,30 @@ currencySelect.addEventListener("change", calculateTip);
 function calculateTip() {
   const billValue = parseFloat(billInput.value);
   const tipValue = parseInt(tipSlider.value);
+  tipPercent.textContent = tipValue + "%";
 
   if (isNaN(billValue) || billValue < 0) {
     errorMsg.textContent = "Please enter a valid positive number for the bill.";
-    tipPercent.value = "";
-    tipAmount.value = "";
-    totalWithTax.value = "";
-    totalWithTipTax.value = "";
-    convertedTip.value = "";
-    convertedTotal.value = "";
-    conversionRateDisplay.textContent = "";
+    clearFields();
     return;
   } else {
     errorMsg.textContent = "";
   }
 
-  tipPercent.value = tipValue + "%";
-
-  // Calculate tax (11%) and total after tax
   const tax = billValue * 0.11;
   const totalTaxed = billValue + tax;
   totalWithTax.value = totalTaxed.toFixed(2);
 
-  // Calculate tip based on total after tax
   const tip = totalTaxed * (tipValue / 100);
   const grandTotal = totalTaxed + tip;
 
   tipAmount.value = tip.toFixed(2);
   totalWithTipTax.value = grandTotal.toFixed(2);
 
-  // Currency Conversion
   const selected = currencySelect.value;
-  let rateLabel = "";
   let tipConverted = tip;
   let totalConverted = grandTotal;
+  let rateLabel = "";
 
   if (selected === "usd") {
     tipConverted = tip.toFixed(2) + " USD";
@@ -74,4 +63,14 @@ function calculateTip() {
   convertedTip.value = tipConverted;
   convertedTotal.value = totalConverted;
   conversionRateDisplay.textContent = rateLabel;
+}
+
+function clearFields() {
+  tipPercent.textContent = "";
+  tipAmount.value = "";
+  totalWithTax.value = "";
+  totalWithTipTax.value = "";
+  convertedTip.value = "";
+  convertedTotal.value = "";
+  conversionRateDisplay.textContent = "";
 }
