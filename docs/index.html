@@ -3,49 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Good Tip Calculator</title>
+  <title>🌅 Sunrise & Sunset Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
-      <img src="https://cdn-icons-png.flaticon.com/512/1011/1011863.png" alt="Calculator Icon" class="logo" />
-      <h1>💡 Good Tip Calculator</h1>
-      <form id="tipForm">
-        <label for="billTotal">🧾 Bill Total ($):</label>
-        <input type="text" id="billTotal" placeholder="Enter bill total" />
-
-        <label for="totalWithTax">🧮 Total with 11% Tax ($):</label>
-        <input type="text" id="totalWithTax" disabled />
-
-        <label for="tipSlider">💰 Tip Percentage (%):</label>
-        <input type="range" id="tipSlider" min="0" max="100" value="15" />
-        <div class="range-label" id="tipPercent">15%</div>
-
-        <label for="tipAmount">💵 Tip Amount ($):</label>
-        <input type="text" id="tipAmount" disabled />
-
-        <label for="totalWithTipTax">🧾 Total with Tip + Tax ($):</label>
-        <input type="text" id="totalWithTipTax" disabled />
-
-        <label for="currency">🌐 Convert to:</label>
-        <select id="currency">
-          <option value="usd">USD (Default)</option>
-          <option value="inr">INR (₹)</option>
-          <option value="eur">EUR (€)</option>
-        </select>
-
-        <div id="conversionRateDisplay"></div>
-
-        <label for="convertedTip">🔄 Converted Tip Amount:</label>
-        <input type="text" id="convertedTip" disabled />
-
-        <label for="convertedTotal">🔄 Converted Total with Tip + Tax:</label>
-        <input type="text" id="convertedTotal" disabled />
-
-        <div id="errorMsg"></div>
-      </form>
-    </div>
+  <div class="container">
+    <header>
+      <h1>🌅 Sunrise & Sunset Dashboard</h1>
+      <p class="subtitle">Detailed solar information for your favorite cities</p>
+      <div class="controls">
+        <select id="city-select" aria-label="Select a city"></select>
+        <button onclick="useGeolocation()">📍 Use My Location</button>
+      </div>
+    </header>
+    <main>
+      <div id="today-card" class="card"></div>
+      <div id="tomorrow-card" class="card"></div>
+    </main>
+    <footer>
+      <p>☀️ Powered by <a href="https://sunrisesunset.io/api/" target="_blank">SunriseSunset.io API</a></p>
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>
