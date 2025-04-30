@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌅 Sunrise & Sunset Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌅 Sunrise & Sunset Dashboard</h1>
+      <p class="subtitle">Detailed solar information for your favorite cities</p>
+      <div class="controls">
+        <select id="city-select" aria-label="Select a city"></select>
+        <button onclick="useGeolocation()">📍 Use My Location</button>
+      </div>
+    </header>
+    <main>
+      <div id="today-card" class="card"></div>
+      <div id="tomorrow-card" class="card"></div>
+    </main>
+    <footer>
+      <p>☀️ Powered by <a href="https://sunrisesunset.io/api/" target="_blank">SunriseSunset.io API</a></p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
